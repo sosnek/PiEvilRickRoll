@@ -6,7 +6,7 @@ Tested on a raspberry pi 3b+
 sudo apt-get update
 sudo apt-get install -y git php dnsmasq dnsmasq-base macchanger hostapd
 git clone https://github.com/sosnek/PiEvilRickRoll.git
-cd PiEvilTwin
+cd PiEvilRickRoll
 chmod +x install.sh
 sudo ./install.sh
 sudo reboot
